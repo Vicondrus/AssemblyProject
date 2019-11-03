@@ -1,0 +1,20 @@
+MAKEZERO MACRO y, xl, xm, xh
+
+	mov ax,1	
+	mov word ptr [xl],ax	;make xl 1 again
+	mov ax,0
+	mov word ptr [xl+2],ax
+	mov word ptr [xl+4],ax
+	mov word ptr [xl+6],ax
+	mov word ptr [xm],ax
+	mov word ptr [xm+2],ax
+	mov word ptr [xm+4],ax
+	mov word ptr [xm+6],ax
+	mov word ptr [xh],ax
+	mov word ptr [xh+2],ax
+	mov word ptr [xh+4],ax
+	mov word ptr [xh+6],ax	;and the rest of them 0
+	mov y,ax	;including y
+	; so now x is 1 and y is 0
+
+ENDM
